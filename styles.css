@@ -1,2 +1,53 @@
 
 /* Your CSS Code here. */
+.size-chart-container {
+    font-family: 'Assistant', -apple-system, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #eaeaec;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.size-chart {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.size-chart thead {
+    background-color: #d15b5b; /* Matching the red/terracotta header */
+    color: white;
+}
+
+.size-chart th {
+    padding: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #bc5353;
+}
+
+.size-chart td {
+    padding: 12px;
+    font-size: 14px;
+    color: #282c3f;
+    border: 1px solid #eaeaec;
+}
+
+/* Row shading logic based on the image */
+.size-chart tr:nth-child(1) td { background-color: #f1b3b3; } /* Waist row */
+.size-chart tr:nth-child(2) td { background-color: #fce4e4; } /* Chest row */
+.size-chart tr:nth-child(3) td { background-color: #e0e0e0; } /* Sleeve row */
+
+.size-chart .row-label {
+    font-weight: 700;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* Hover effect for interactivity */
+.size-chart tbody tr:hover {
+    filter: brightness(95%);
+    transition: 0.2s;
+}
